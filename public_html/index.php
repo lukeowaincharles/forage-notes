@@ -60,7 +60,6 @@
 
 
                                 <?php
-// define variables and set to empty values
                                 $emailErr = "";
                                 $email = "";
 
@@ -95,7 +94,6 @@
                                     </div>
 
                                 </form>
-                                Your email address is: <?php echo $_POST["email"]; ?>
                                 <p>For enquiries please email <a href="mailto:info@foragenotes.com">info@foragenotes.com</a></p>
                             </div>
                         </div>
