@@ -1,4 +1,3 @@
-
 .top__image__wrapper {
     position: absolute;
     right: 0;
@@ -25,6 +24,7 @@
         width: 70%;
     }
 }
+
 .top__image__wrapper--flowers {
     position: absolute;
     right: 50px;
@@ -34,7 +34,6 @@
         top: -190px;
     }
 }
-
 
 .outer__wrapper {
     border: 15px solid #7AC90D;
@@ -46,14 +45,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media @desktop {
-        justify-content: left;
-    }
     @media @tablet {
         border: 35px solid #7AC90D;
     }
     @media @desktop {
         border: 55px solid #7AC90D;
+        justify-content: left;
     }
     .top__image__wrapper--juniper {
         position: absolute;
@@ -67,36 +64,12 @@
         img {
             width: 70%;
         }
-        /*        display: none;
-                @media @desktop {
-                    display: block;
-                    position: absolute;
-                }*/
     }
 }
-
-
-:not(.flexbox) {
-    .left__content {
-        /*        position: absolute;
-                transform: translateX(-50%)translateY(-50%);
-                top: 50%;
-                left: 50%;*/
-    }
-}
-
-
 
 .left__content {
-    /*padding-top: 40px;*/
-
-    /*padding: 30px;*/
     width: 100%;
     overflow: hidden;
-
-
-
-
     @media @desktop {
         width: 50%;
         padding: 25px;
@@ -104,26 +77,21 @@
     @media @lg-desktop {
         padding: 70px;
     }
-
-    .left__content--wrapper {
-        .first__paragraph {
-            font-size: 20px;
-        }
-        .content__wrapper {
-            p {
-                font-size: 14px;
-            }
+    .first__paragraph {
+        font-size: 20px;
+        margin-bottom: 19px;
+    }
+    .content__wrapper {
+        p {
+            font-size: 14px;
+            margin-bottom: 14px;
         }
     }
-
-
-
     .image__wrapper {
         position: relative;
         margin-bottom: 50px;
-
         &:after {
-            content: ' '; 
+            content: ' ';
             height: 2px;
             width: 100%;
             background-color: #7AC90D;
@@ -133,44 +101,42 @@
         }
     }
     .email__sign-up {
-        .form-control, .hide-button {
+        .form-control,
+        .hide-button {
             .tk1;
             text-transform: uppercase;
             font-size: 10px;
-            @media @desktop {
-
-            }
+            @media @desktop {}
         }
         .form-group {
-        input {
+            display: flex;
+            .btn-default {
+                text-shadow: none;
+                border: 0;
+                border-radius: 0 4px 4px 0;
+            }
+        }
+        .mc-field-group {
             width: 80%;
-            display: inline-block;
+            @media @desktop {
+                width: 70%;
+            }
+        }
+        .required {
             border: 0;
             border-radius: 2px;
             background-color: #FFF;
             box-shadow: none;
             border: 1px solid #E4F4CF;
-            &:active, &:hover, &:focus{
+            &:active,
+                &:hover,
+                &:focus {
                 border: 1px solid @color-primary-1;
             }
-            @media @desktop {
-                width: 70%;
-            }
-        }
-        .btn-default {
-            text-shadow: none;
-            
-            border: 0;
-            border-radius: 0 4px 4px 0;
-        }
-    }
-        input {
             background-color: #E4F4CF;
             color: #98C5B5;
-            
-
         }
-        input::placeholder {
+        .required::placeholder {
             color: #98C5B5;
         }
         .hide-button {
@@ -178,13 +144,13 @@
             color: #006F47;
             height: 39px;
             vertical-align: inherit;
-            margin-left: -5px;
             &:hover {
                 background-color: #7AC90D;
             }
         }
     }
 }
+
 .right__content {
     display: none;
     right: 0;
@@ -198,12 +164,6 @@
         display: block;
     }
     .cover__image_wrapper {
-        /*        background-image: url('../img/photograph.png');
-                background-size: cover;
-                background-position: center;
-                width: 100%;
-                height: 100vh;
-                display: inline-block;*/
         width: 100%;
         height: 100vh;
         .cover__image {
@@ -216,17 +176,22 @@
     .right__content--wrapper {
         display: flex;
         justify-content: center;
-        /*position: relative;*/
         .display__h1 {
             color: white;
             font-size: 48px;
             .absolute-center-y;
             @media @desktop {
-                font-size: 78px;    
+                font-size: 78px;
             }
             @media @lg-desktop {
                 font-size: 110px;
             }
         }
+    }
+}
+
+.is-restricted {
+    @media @desktop {
+        max-width: 452px;
     }
 }
